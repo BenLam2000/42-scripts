@@ -12,11 +12,18 @@ echo -ne '\n - Adding script that runs discord archive script to $HOME/.local/bi
 if [ ! -d $HOME/.local/bin ]; then
 	mkdir -p $HOME/.local/bin
 fi
+
 cat > $HOME/.local/bin/discord << 'EOF'
 #!/usr/bin/bash
 exec nohup $HOME/.local/share/Discord/discord --no-sandbox "$@" &
 EOF
 
 chmod +x $HOME/.local/bin/discord
+
+
+if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
+	echo -ne '\n - Adding $HOME/.local/bin to environment path\n'
+	export PATH="$PATH:$HOME/.local/bin"
+fi
 
 echo -ne '\nYou can now run the "discord" command anywhere in the terminal to start the installation and should be brought to the log in screen\n'
