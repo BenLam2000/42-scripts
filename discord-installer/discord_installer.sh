@@ -15,7 +15,7 @@ fi
 
 cat > $HOME/.local/bin/discord << 'EOF'
 #!/usr/bin/bash
-exec nohup $HOME/.local/share/Discord/discord --no-sandbox "$@" &
+exec nohup $HOME/.local/share/Discord/discord --no-sandbox "$@" > $HOME/.config/discord/output.log 2>&1 &
 EOF
 
 chmod +x $HOME/.local/bin/discord
@@ -26,10 +26,9 @@ if [ ! -f $HOME/.zshrc ]; then
 fi
 
 # updating environment path
-echo -ne '\n - Adding $HOME/.local/bin to environment path\n'
+echo -ne '\n - Adding $HOME/.local/bin to environment path in ~/.zshrc\n'
 cat << 'EOF' >> $HOME/.zshrc
 if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
 	export PATH="$PATH:$HOME/.local/bin"
 fi
 EOF
-echo -ne "\n - Updated environment path:\n $PATH\n"
