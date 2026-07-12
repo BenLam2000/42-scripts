@@ -15,7 +15,7 @@ fi
 
 cat > $HOME/.local/bin/discord << 'EOF'
 #!/usr/bin/bash
-exec nohup $HOME/.local/share/Discord/discord --no-sandbox "$@" > $HOME/.config/discord/output.log 2>&1 &
+exec nohup $HOME/.local/share/Discord/discord --no-sandbox "$@" > $HOME/.local/share/Discord/output.log 2>&1 &
 EOF
 
 chmod +x $HOME/.local/bin/discord
