@@ -24,6 +24,7 @@ chmod +x $HOME/.local/bin/discord
 if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
 	echo -ne '\n - Adding $HOME/.local/bin to environment path\n'
 	export PATH="$PATH:$HOME/.local/bin"
+	echo -ne "\n - Updated environment path:\n $PATH\n"
 fi
 
 echo -ne '\nYou can now run the "discord" command anywhere in the terminal to start the installation and should be brought to the log in screen\n'
