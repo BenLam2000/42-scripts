@@ -34,17 +34,22 @@ discord
 
 
 # Instructions
-### Method 1 (bash):
+1. Run the installer script using bash:
 ```
 bash discord_installer.sh
 ```
-
-### Method 2 (zsh):
-Since zshell does not allow running scripts without execute permissions:
+or zshell (chmod since zshell does not allow running scripts without execute permissions):
 ```
 chmod +x discord_installer.sh
 ./discord_installer.sh
 ```
+
+2. Since the environment path has been updated in ~/.zshrc, refresh it: 
+```
+source ~/.zshrc
+```
+
+3. You can now type `discord` anywhere in your terminal and discord should install the necessary files (first time only) and the discord login screen should appear.
 
 # Beyond Discord
 This concept for installing software in `$HOME/.local/` **SHOULD** work for all software that provides archive files (.tar.gz, .tar.xz, etc.). Appimage is another form of software distribution that is even simpler with just a single downloaded executable, but it uses a framework called FUSE, which unfortunately is not available on 42KL PCs (ask bocal to install maybe?)

@@ -32,7 +32,4 @@ if [[ "$PATH" != *"$HOME/.local/bin"* ]]; then
 	export PATH="$PATH:$HOME/.local/bin"
 fi
 EOF
-source $HOME/.zshrc
 echo -ne "\n - Updated environment path:\n $PATH\n"
-
-echo -ne '\nYou can now run the "discord" command anywhere in the terminal to start the installation and should be brought to the log in screen\n'
