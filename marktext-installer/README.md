@@ -9,14 +9,14 @@ If you would like to understand how the script works, look at the **Prerequisite
    ```bash
    cd ~
    git clone git@github.com:BenLam2000/42-scripts.git
-   cd 42-scripts/discord-installer
+   cd 42-scripts/marktext-installer
    ```
 
 2. Add execute permissions to the script and run it:
    
    ```bash
-   chmod +x discord_installer.sh
-   ./discord_installer.sh
+   chmod +x marktext_installer.sh
+   ./marktext_installer.sh
    ```
 
 3. Since the environment path has been updated in ~/.zshrc, reload it:
@@ -25,7 +25,7 @@ If you would like to understand how the script works, look at the **Prerequisite
    source ~/.zshrc
    ```
 
-4. You can now type `discord` anywhere in your terminal and it should install the necessary files (first time only) and the discord login screen should appear.
+4. You can now type `marktext` anywhere in your terminal to open the app.
 
 # Contributions and Bug Reports
 
