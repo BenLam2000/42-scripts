@@ -2,9 +2,9 @@
 
 ######################### MODIFY THIS ONLY ###################################
 # VARIABLES
-program='discord'  # command to type to open program
-program_bin='discord'  # name of binary in archive file
-download_link='https://discord.com/api/download?platform=linux&format=tar.gz'
+program='marktext'  # command to type to open program
+program_bin='marktext'  # name of binary in archive file
+download_link='https://github.com/marktext/marktext/releases/download/v0.19.1/marktext-linux-0.19.1.tar.gz'
 ##############################################################################
 
 # COLOURS
